@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Zdog</string>
+    <string name="text_day">Day</string>
+    <string name="text_night">Night</string>
+    <string name="text_static">Static</string>
+    <string name="text_dynamic">Dynamic</string>
+    <string name="text_basic_shapes">Basic Shapes</string>
+    <string name="text_weather_status">Weather Status</string>
+    <string name="text_weather_effect">Weather Effect</string>
+    <string name="text_stop_rotating">Stop rotating</string>
+    <string name="text_rotate">Rotate</string>
+</resources>

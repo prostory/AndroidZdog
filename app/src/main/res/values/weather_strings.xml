@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"  tools:ignore="MissingTranslation">
+    <string-array name="conditions">
+        <item>Tornado</item>
+        <item>Tropical storm</item>
+        <item>Hurricane</item>
+        <item>Severe thunderstorms</item>
+        <item>Thunderstorms</item>
+        <item>Mixed rain and snow</item>
+        <item>Mixed rain and sleet</item>
+        <item>Mixed snow and sleet</item>
+        <item>Freezing drizzle</item>
+        <item>Drizzle</item>
+        <item>Freezing rain</item>
+        <item>Showers</item>
+        <item>Rain</item>
+        <item>Snow flurries</item>
+        <item>Light snow showers</item>
+        <item>Blowing snow</item>
+        <item>Snow</item>
+        <item>Hail</item>
+        <item>Sleet</item>
+        <item>Dust</item>
+        <item>Foggy</item>
+        <item>Haze</item>
+        <item>Smoky</item>
+        <item>Blustery</item>
+        <item>Windy</item>
+        <item>Cold</item>
+        <item>Cloudy</item>
+        <item>Mostly cloudy</item>
+        <item>Mostly cloudy</item>
+        <item>Partly cloudy</item>
+        <item>Partly cloudy</item>
+        <item>Clear</item>
+        <item>Sunny</item>
+        <item>Fair</item>
+        <item>Fair</item>
+        <item>Mixed rain and hail</item>
+        <item>Hot</item>
+        <item>Isolated thunderstorms</item>
+        <item>Scattered thunderstorms</item>
+        <item>Scattered showers</item>
+        <item>Heavy rain</item>
+        <item>Scattered snow showers</item>
+        <item>Heavy snow</item>
+        <item>Blizzard</item>
+        <item>Unknown</item>
+        <item>Scattered showers</item>
+        <item>Scattered snow showers</item>
+        <item>Scattered thundershowers</item>
+    </string-array>
+</resources>
