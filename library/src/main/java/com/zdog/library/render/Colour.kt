@@ -8,6 +8,8 @@ class Colour(c: Int) {
     constructor(a: Int, r: Int, g: Int, b: Int):
             this((a shl 24) + (r shl 16) + (g shl 8) + b)
 
+    constructor(colour: Colour): this(colour.get())
+
     var alpha : Int
         get() = colorPart(value, 24)
         set(value) {

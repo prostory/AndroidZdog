@@ -88,7 +88,9 @@ fun Anchor.translateBy(d: Drawable, x: Float = 0f, y: Float = 0f, z: Float = 0f,
     translateBy(d, vector(x, y, z), block)
 
 fun Anchor.translateBy(d: Drawable, delta: Vector, block: (ValueAnimator.() -> Unit)? = null): ValueAnimator {
-    val src = translate.copy()
+    val x = translate.x
+    val y = translate.y
+    val z = translate.z
 
     return ValueAnimator.ofFloat(0f, 1f).also {
         it.interpolator = LinearInterpolator()
@@ -97,7 +99,7 @@ fun Anchor.translateBy(d: Drawable, delta: Vector, block: (ValueAnimator.() -> U
         block?.invoke(it)
 
         it.update(d) {
-            translate.set(delta).multiply(it).add(src)
+            translate.set(delta).multiply(it).add(x, y, z)
         }
 
         addAnimator(Anchor.AnimatorType.Translate, it)
@@ -113,7 +115,9 @@ fun Anchor.rotateBy(d: Drawable, x: Float = 0f, y: Float = 0f, z: Float = 0f,
     rotateBy(d, vector(x, y, z), block)
 
 fun Anchor.rotateBy(d: Drawable, delta: Vector, block: (ValueAnimator.() -> Unit)? = null): ValueAnimator {
-    val src = rotate.copy()
+    val x = rotate.x
+    val y = rotate.y
+    val z = rotate.z
 
     return ValueAnimator.ofFloat(0f, 1f).also {
         it.interpolator = LinearInterpolator()
@@ -122,7 +126,7 @@ fun Anchor.rotateBy(d: Drawable, delta: Vector, block: (ValueAnimator.() -> Unit
         block?.invoke(it)
 
         it.update(d) {
-            rotate.set(delta).multiply(it).add(src)
+            rotate.set(delta).multiply(it).add(x, y, z)
         }
 
         addAnimator(Anchor.AnimatorType.Rotate, it)
@@ -130,8 +134,11 @@ fun Anchor.rotateBy(d: Drawable, delta: Vector, block: (ValueAnimator.() -> Unit
 }
 
 fun Anchor.scaleTo(d: Drawable, dest: Float, block: (ValueAnimator.() -> Unit)? = null): ValueAnimator {
-    val src = scale.copy()
-    val delta = vector(dest).subtract(src)
+    val x = scale.x
+    val y = scale.y
+    val z = scale.z
+
+    val delta = vector(dest).subtract(scale)
 
     return ValueAnimator.ofFloat(0f, 1f).also {
         it.interpolator = LinearInterpolator()
@@ -140,7 +147,7 @@ fun Anchor.scaleTo(d: Drawable, dest: Float, block: (ValueAnimator.() -> Unit)? 
         block?.invoke(it)
 
         it.update(d) {
-            scale.set(delta).multiply(it).add(src)
+            scale.set(delta).multiply(it).add(x, y, z)
         }
 
         addAnimator(Anchor.AnimatorType.Scale, it)
@@ -148,8 +155,8 @@ fun Anchor.scaleTo(d: Drawable, dest: Float, block: (ValueAnimator.() -> Unit)? 
 }
 
 fun Anchor.alphaTo(d: Drawable, dest: Float, block: (ValueAnimator.() -> Unit)? = null): ValueAnimator {
-    val src = alpha
-    val delta = dest - src
+    val alpha = alpha
+    val delta = dest - alpha
 
     return ValueAnimator.ofFloat(0f, 1f).also {
         it.interpolator = LinearInterpolator()
@@ -158,7 +165,7 @@ fun Anchor.alphaTo(d: Drawable, dest: Float, block: (ValueAnimator.() -> Unit)? 
         block?.invoke(it)
 
         it.update(d) {
-            alpha = src + delta * it
+            this.alpha = alpha + delta * it
         }
 
         addAnimator(Anchor.AnimatorType.Alpha, it)
