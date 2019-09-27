@@ -62,7 +62,7 @@ Add it in your root build.gradle at the end of repositories:
 **Step 2.** Add the dependency
 
 ```xml
-<dependency>
+	<dependency>
 	    <groupId>com.github.prostory</groupId>
 	    <artifactId>AndroidZdog</artifactId>
 	    <version>v1.0.0</version>
