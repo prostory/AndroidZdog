@@ -5,7 +5,7 @@ import com.zdog.library.render.*
 
 open class World: ZdogDrawable()  {
     init {
-        illo.color.alpha = 0
+        illo.alpha(0f)
     }
 
     fun rotate(rotate: Boolean) {

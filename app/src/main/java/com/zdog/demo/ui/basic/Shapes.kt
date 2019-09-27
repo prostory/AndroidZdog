@@ -15,43 +15,43 @@ class Shapes {
         shape {
             addTo = shapes[index++].illo
             path(
-                line(x = -40f),
+                move(x = -40f),
                 line(x = 40f)
             )
             stroke = 20f
-            color = "#636".toColour()
+            color = "#636"
         }
 
         shape {
             addTo = shapes[index++].illo
             path(
-                line(x = -32f, y = -40f),
+                move(x = -32f, y = -40f),
                 line(x = 32f, y = -40f),
                 line(x = -32f, y = 40f),
                 line(x = 32f, y = 40f)
             )
             closed = false
             stroke = 20f
-            color = "#636".toColour()
+            color = "#636"
         }
 
         shape {
             addTo = shapes[index++].illo
             path(
-                line(x = -32f, y = -40f, z = 40f),
+                move(x = -32f, y = -40f, z = 40f),
                 line(x = 32f, y = -40f),
                 line(x = 32f, y = 40f, z = 40f),
                 line(x = 32f, y = 40f, z = -40f)
             )
             closed = false
             stroke = 20f
-            color = "#636".toColour()
+            color = "#636"
         }
 
         shape {
             addTo = shapes[index++].illo
             path(
-                line(x = -60f, y = -60f),
+                move(x = -60f, y = -60f),
                 arc(
                     vector(x = 20f, y = -60f),
                     vector(x = 20f, y = 20f)
@@ -63,13 +63,13 @@ class Shapes {
             )
             closed = false
             stroke = 20f
-            color = "#636".toColour()
+            color = "#636"
         }
 
         shape {
             addTo = shapes[index++].illo
             path(
-                line(x = -60f, y = -60f),
+                move(x = -60f, y = -60f),
                 bezier(
                     vector(x = 20f, y = -60f),
                     vector(x = 20f, y = 60f),
@@ -78,18 +78,18 @@ class Shapes {
             )
             closed = false
             stroke = 20f
-            color = "#636".toColour()
+            color = "#636"
         }
 
         val triangle = shape {
             addTo = shapes[index++].illo
             path(
-                line(x = 0f, y = -40f),
+                move(x = 0f, y = -40f),
                 line(x = 40f, y = 40f),
                 line(x = -40f, y = 40f)
             )
             stroke = 20f
-            color = "#636".toColour()
+            color = "#636"
         }
 
         triangle.copy {
@@ -101,8 +101,8 @@ class Shapes {
             addTo = shapes[index++].illo
             diameter = 120f
             stroke = 0f
-            color = "#C25".toColour()
-            backface = "#EA0".toColour()
+            color = "#C25"
+            backface = "#EA0"
         }
 
         cone {
@@ -110,8 +110,8 @@ class Shapes {
             diameter = 70f
             length = 90f
             stroke = 0f
-            color = "#636".toColour()
-            backface = "#C25".toColour()
+            color = "#636"
+            backface = "#C25"
         }
 
         cylinder {
@@ -119,8 +119,8 @@ class Shapes {
             diameter = 80f
             length = 120f
             stroke = 0f
-            color = "#C25".toColour()
-            backface = "#E62".toColour()
+            color = "#C25"
+            backface = "#E62"
         }
 
         cylinder {
@@ -128,9 +128,9 @@ class Shapes {
             diameter = 80f
             length = 120f
             stroke = 0f
-            color = "#C25".toColour()
-            frontFace = "#EA0".toColour()
-            backface = "#636".toColour()
+            color = "#C25"
+            frontFace = "#EA0"
+            backface = "#636"
         }
 
         val box = box {
@@ -139,18 +139,18 @@ class Shapes {
             height = 100f
             depth = 80f
             stroke = 0f
-            color = "#C25".toColour()
-            leftFace = "#EA0".toColour()
-            rightFace = "#E62".toColour()
-            topFace = "#ED0".toColour()
-            bottomFace = "#636".toColour()
+            color = "#C25"
+            leftFace = "#EA0"
+            rightFace = "#E62"
+            topFace = "#ED0"
+            bottomFace = "#636"
         }
 
         box.copy {
             addTo = shapes[index++].illo
             leftFace = null
             rightFace = null
-            rearFace = "#EA0".toColour()
+            rearFace = "#EA0"
         }
 
         val distance = 40f
@@ -160,23 +160,23 @@ class Shapes {
             addTo = shapes[index++].illo
             translate(y = -distance)
             stroke = 80f
-            color = "#636".toColour()
+            color = "#636"
         }
         dot.copy {
             translate(x = -distance)
-            color = "#EA0".toColour()
+            color = "#EA0"
         }
         dot.copy {
             translate(z = distance)
-            color = "#C25".toColour()
+            color = "#C25"
         }
         dot.copy {
             translate(x = distance)
-            color = "#E62".toColour()
+            color = "#E62"
         }
         dot.copy {
             translate(z = -distance)
-            color = "#C25".toColour()
+            color = "#C25"
         }
         dot.copy {
             translate(y = distance)

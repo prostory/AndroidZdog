@@ -39,7 +39,7 @@ class CylinderGroup : Group() {
 
         renderer.setLineCap(BUTT)
         renderer.renderPath(pathCommands)
-        renderer.stroke(true, color, strokeWidth, renderAlpha)
+        renderer.stroke(true, colour, strokeWidth, renderAlpha)
         renderer.end()
         renderer.setLineCap(ROUND)
     }

@@ -12,15 +12,19 @@ open class Anchor: IProperty {
     val translate by lazy { vector() }
     val rotate by lazy { vector() }
     val scale by lazy { vector(onePoint) }
-    open var color = "#333".toColour()
+    open var color: String
+        get() = colour.toColor()
         set(value) {
-            field.set(value)
+            if (value.isNotBlank()) {
+                colour = value.color
+            }
         }
 
     var alpha: Float = 1f
 
     var addTo: Anchor? = null
 
+    var colour = "#333".color
     val renderOrigin by lazy { vector() }
     var sortValue = renderOrigin.z
 
@@ -167,7 +171,7 @@ open class Anchor: IProperty {
             it.translate.set(translate)
             it.rotate.set(rotate)
             it.scale.set(scale)
-            it.color.set(color)
+            it.colour = colour
             it.alpha = alpha
             it.addTo = addTo
         }

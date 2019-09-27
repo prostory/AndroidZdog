@@ -11,7 +11,7 @@ class Bird : Entity() {
     private val shape = bird {
         translate { x = 24f; y = -35f
             z = layerSpace * -1f }
-        color = midnight.colour
+        color = midnight.color
     }
 
     private fun leave(world: World) {

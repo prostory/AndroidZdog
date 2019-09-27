@@ -238,11 +238,11 @@ open class ZdogDrawable : Drawable() {
             block?.invoke(this)
         }
 
-    fun Anchor.colorTo(dest: Colour, block: (ValueAnimator.() -> Unit)? = null) =
+    fun Anchor.colorTo(dest: String, block: (ValueAnimator.() -> Unit)? = null) =
         colorTo(this@ZdogDrawable, dest)  {
-            val _color = color.get()
+            val _color = colour
             onReset {
-                color.set(_color)
+                colour = _color
             }
             block?.invoke(this)
         }

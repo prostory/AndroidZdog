@@ -20,7 +20,11 @@ open class Illustration: Anchor() {
     private val renderer = Renderer()
 
     init {
-        color = "#FDB".toColour()
+        colour = "#FDB".color
+    }
+
+    fun alpha(alpha: Float) {
+        colour = colour.setAlpha((alpha * 0xFF).toInt())
     }
 
     fun setSize(width: Float, height: Float) {
@@ -41,7 +45,7 @@ open class Illustration: Anchor() {
     }
 
     private fun preRender() {
-        renderer.clearRect(translate.x, translate.y, width, height, color)
+        renderer.clearRect(translate.x, translate.y, width, height, colour)
         renderer.save()
         if (centered) {
             val centerX = width / 2

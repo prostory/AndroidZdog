@@ -3,6 +3,7 @@ package com.zdog.library.render
 import android.graphics.Path
 import android.graphics.PathEffect
 import android.graphics.Shader
+import com.condor.weather.library.extension.empty
 
 open class Shape : Anchor() {
     open var stroke = 1f
@@ -10,10 +11,12 @@ open class Shape : Anchor() {
     open var visible = true
     var closed = true
     var front = vector(z = 1f)
-    var backface: Colour? = null
+    var backface: String? = String.empty()
         set(value) {
-            if (field == null) field = value else field?.set(value)
-            showBackFace = value != null
+            field = value
+            if (!value.isNullOrEmpty()) {
+                backfaceColor = value.color
+            }
         }
     val renderNormal = vector()
     var effect: PathEffect? = null
@@ -21,17 +24,17 @@ open class Shape : Anchor() {
     var segment: Segment? = null
     var layer: ShaderLayer? = null
 
-    internal var showBackFace = true
-
     private var isFacingBack = false
     private val renderFront = vector(front)
     var path: MutableList<PathCommand> = mutableListOf()
         private set
 
-    private val renderColor: Colour
+    internal var backfaceColor = colour
+
+    private val renderColor: Int
         get() {
-            val isBackFaceColor = backface != null && isFacingBack
-            return if (isBackFaceColor) backface!! else color
+            val isBackFaceColor = !backface.isNullOrEmpty() && isFacingBack
+            return if (isBackFaceColor) backfaceColor else colour
         }
 
     override fun onCreate() {
@@ -121,7 +124,7 @@ open class Shape : Anchor() {
             return
         }
         isFacingBack = renderNormal.z > 0
-        if (!showBackFace && isFacingBack) {
+        if (backface == null && isFacingBack) {
             return
         }
 
@@ -186,7 +189,6 @@ open class Shape : Anchor() {
             it.path = path.map { it.clone() }.toMutableList()
             it.front.set(front)
             it.backface = backface
-            it.showBackFace = showBackFace
         }
     }
 }

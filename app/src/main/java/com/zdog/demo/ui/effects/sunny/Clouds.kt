@@ -10,7 +10,7 @@ import com.zdog.library.render.*
 
 class Clouds : Entity() {
     private val container = combine {
-        color = white.colour
+        color = white.color
     }
     private val cloud1 = cloud1 {
         addTo = container

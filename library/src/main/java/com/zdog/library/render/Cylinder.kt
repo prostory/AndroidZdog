@@ -3,46 +3,39 @@ package com.zdog.library.render
 class Cylinder : Shape() {
     var diameter = 1f
     var length = 1f
-    var frontFace: Colour? = null
+    var frontFace: String? = null
 
     override var stroke: Float = 1f
         set(value) {
             field = value
-            if (frontBase != null) {
-                frontBase!!.stroke = value
-                rearBase!!.stroke = value
-                group!!.stroke = value
-            }
+            frontBase?.stroke = value
+            rearBase?.stroke = value
+            group?.stroke = value
         }
 
     override var fill: Boolean = true
         set(value) {
             field = value
-            if (frontBase != null) {
-                frontBase!!.fill = value
-                rearBase!!.fill = value
-                group!!.fill = value
-            }
+            frontBase?.fill = value
+            rearBase?.fill = value
+            group?.fill = value
         }
 
-    override var color = "#333".toColour()
+    override var color
+        get() = colour.toColor()
         set(value) {
-            field = value
-            if (frontBase != null) {
-                frontBase!!.color = value
-                rearBase!!.color = value
-                group!!.color = value
-            }
+            colour = value.color
+            frontBase?.color = value
+            rearBase?.color = value
+            group?.color = value
         }
 
     override var visible: Boolean = true
         set(value) {
             field = value
-            if (frontBase != null) {
-                frontBase!!.visible = value
-                rearBase!!.visible = value
-                group!!.visible = value
-            }
+            frontBase?.visible = value
+            rearBase?.visible = value
+            group?.visible = value
         }
 
     private var group: CylinderGroup? = null
@@ -52,14 +45,14 @@ class Cylinder : Shape() {
     override fun onCreate() {
         super.onCreate()
 
-        group = CylinderGroup().setup {
+        val group = CylinderGroup().setup {
             it.addTo = this
             it.color = color
             it.visible = visible
         }
         val baseZ = length/2
         val baseColor = if (backface != null) backface else null
-        group!!.frontBase = Ellipse().setup {
+        group.frontBase = Ellipse().setup {
             it.addTo = group
             it.diameter = diameter
             it.translate(z = baseZ)
@@ -70,14 +63,16 @@ class Cylinder : Shape() {
             it.backface = if (frontFace != null) frontFace else baseColor
             it.visible = visible
         }
-        frontBase = group!!.frontBase
+        frontBase = group.frontBase
 
-        group!!.rearBase = frontBase!!.copy {
+        group.rearBase = group.frontBase.copy {
             translate(z = -baseZ)
             rotate(y = 0f)
             backface = baseColor
         }
-        rearBase = group!!.rearBase
+        rearBase = group.rearBase
+
+        this.group = group
     }
 
     override fun render(renderer: Renderer) {

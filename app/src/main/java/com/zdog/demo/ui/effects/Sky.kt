@@ -76,7 +76,7 @@ class Sky(world: World) {
 
         sunshine = combine {
             translate(y = -16f, z = 47f)
-            color = Colors.gold2.colour
+            color = Colors.gold2.color
         }.also {
             (0..11).forEach { index ->
                 shape {

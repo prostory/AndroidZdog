@@ -11,13 +11,13 @@ class Stars: Entity() {
     private val star1 = star {
         translate { x = -50f; y = -50f;
             z = layerSpace *-1.5f}
-        color = gold1.colour
+        color = gold1.color
     }
 
     private val star2 = star {
         translate { x = 42f; y = -20f;
             z = -layerSpace *0.5f }
-        color = gold1.colour
+        color = gold1.color
     }
 
     private fun leave(world: World) {

@@ -19,7 +19,7 @@ class Thunder : Group() {
                     line(0f, 40f),
                     line(30f, 0f)
                 )
-                color = gold1.colour
+                color = gold1.color
                 stroke = 0f
                 fill = true
                 addTo = it
@@ -31,7 +31,7 @@ class Thunder : Group() {
                     line(25.5f, 6f),
                     line(-20f, 6f)
                 )
-                color = gold2.colour
+                color = gold2.color
                 stroke = 0f
                 fill = true
                 addTo = it

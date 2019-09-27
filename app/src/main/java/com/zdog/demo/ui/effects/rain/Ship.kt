@@ -9,36 +9,36 @@ import com.zdog.library.render.*
 class Ship : Group() {
     private var bodyScale: Float = 1f
     private val day = arrayOf(
-        "#e5e9ec".toColour(),
-        "#dadada".toColour(),
-        "#f5f5f5".toColour(),
-        "#808080".toColour(),
-        "#f5f5f5".toColour(),
-        "#dadada".toColour(),
-        "#72a4c4".toColour(),
-        "#a5d4e4".toColour(),
-        "#e3001b".toColour(),
-        "#ffffff".toColour(),
-        "#808080".toColour(),
-        "#ffffff".toColour(),
-        "#8a9295".toColour(),
-        "#adb1b3".toColour()
+        "#e5e9ec",
+        "#dadada",
+        "#f5f5f5",
+        "#808080",
+        "#f5f5f5",
+        "#dadada",
+        "#72a4c4",
+        "#a5d4e4",
+        "#e3001b",
+        "#ffffff",
+        "#808080",
+        "#ffffff",
+        "#8a9295",
+        "#adb1b3"
     )
     private val night = arrayOf(
-        "#423356".toColour(),
-        "#423356".toColour(),
-        "#423456".toColour(),
-        "#3F3053".toColour(),
-        "#423456".toColour(),
-        "#423456".toColour(),
-        "#FA3".toColour(),
-        "#FA6".toColour(),
-        "#422C50".toColour(),
-        "#433457".toColour(),
-        "#3F3053".toColour(),
-        "#433457".toColour(),
-        "#3F3053".toColour(),
-        "#403154".toColour()
+        "#423356",
+        "#423356",
+        "#423456",
+        "#3F3053",
+        "#423456",
+        "#423456",
+        "#FA3",
+        "#FA6",
+        "#422C50",
+        "#433457",
+        "#3F3053",
+        "#433457",
+        "#3F3053",
+        "#403154"
     )
 
     init {

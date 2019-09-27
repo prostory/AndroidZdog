@@ -10,7 +10,6 @@ import com.zdog.library.render.line
 import com.zdog.library.render.move
 import com.zdog.library.render.shape
 import com.zdog.library.render.sin
-import com.zdog.library.render.toColour
 
 class Dust: Scattered() {
     private val dusts: Combine
@@ -20,14 +19,14 @@ class Dust: Scattered() {
             translate { y = 100f }
             stroke = 16f
             fill = false
-            color = "#ddd".toColour()
+            color = "#ddd"
             addTo = illo
         }
 
         dusts = combine {
             translate { y = 100f; z = -8f }
             addTo = illo
-            color = dust.colour
+            color = dust.color
         }.also {
             val dots = shape {
                 path(

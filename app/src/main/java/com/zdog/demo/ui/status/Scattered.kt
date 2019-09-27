@@ -4,7 +4,6 @@ import com.zdog.demo.ui.shapes.Colors.white
 import com.zdog.demo.ui.shapes.Cloud
 import com.zdog.library.render.anchor
 import com.zdog.library.render.set
-import com.zdog.library.render.toColour
 
 open class Scattered(private val showers: Boolean = false) : Sunny(60f) {
     protected val cloud = anchor {
@@ -12,12 +11,12 @@ open class Scattered(private val showers: Boolean = false) : Sunny(60f) {
         addTo = sky
     }.also {
         Cloud().set {
-            color = white.colour
+            color = white.color
             scale(1.2f)
             addTo = it
         }.shader(5f) {
             translate { z = -4f }
-            color = "#ddd".toColour()
+            color = "#ddd"
             alpha = 0.3f
         }
     }

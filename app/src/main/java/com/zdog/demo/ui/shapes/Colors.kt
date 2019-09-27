@@ -1,7 +1,5 @@
 package com.zdog.demo.ui.shapes
 
-import com.zdog.library.render.toColour
-
 enum class Colors(c: String) {
     midnight("#313"),
     eggplant("#525"),
@@ -40,5 +38,5 @@ enum class Colors(c: String) {
 
     shader("#60222222");
 
-    val colour = c.toColour()
+    val color = c
 }

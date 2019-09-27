@@ -172,9 +172,10 @@ fun Anchor.alphaTo(d: Drawable, dest: Float, block: (ValueAnimator.() -> Unit)? 
     }
 }
 
-fun Anchor.colorTo(d: Drawable, dest: Colour, block: (ValueAnimator.() -> Unit)? = null): ValueAnimator {
+fun Anchor.colorTo(d: Drawable, dest: String, block: (ValueAnimator.() -> Unit)? = null): ValueAnimator {
+    val dest = dest.color
     val c = arrayOf(
-            color.alpha, color.red, color.green, color.blue
+            colour.alpha, colour.red, colour.green, colour.blue
     )
     val delta = arrayOf(
             dest.alpha - c[0],
@@ -182,6 +183,9 @@ fun Anchor.colorTo(d: Drawable, dest: Colour, block: (ValueAnimator.() -> Unit)?
             dest.green - c[2],
             dest.blue - c[3]
     )
+
+    fun make(a: Int, r: Int, g: Int, b: Int) =
+        (a shl 24) + (r shl 16) + (g shl 8) + b
 
     fun compute(delta: Int, from: Int, factor: Float) =
             (delta * factor + from).toInt()
@@ -193,7 +197,7 @@ fun Anchor.colorTo(d: Drawable, dest: Colour, block: (ValueAnimator.() -> Unit)?
         block?.invoke(it)
 
         it.update(d) {
-            color.set(
+            colour = make(
                     compute(delta[0], c[0], it),
                     compute(delta[1], c[1], it),
                     compute(delta[2], c[2], it),

@@ -2,72 +2,71 @@ package com.zdog.demo.ui.effects.sunny
 
 import com.zdog.demo.ui.effects.SkyTheme
 import com.zdog.demo.ui.shapes.Colors.*
-import com.zdog.library.render.Colour
 
 internal data class Theme(
-    override val sky: Colour,
-    override val background1: Colour,
-    override val background2: Colour,
-    override val background3: Colour,
-    override val sun: Colour,
-    override val cloud: Colour,
+    override val sky: String,
+    override val background1: String,
+    override val background2: String,
+    override val background3: String,
+    override val sun: String,
+    override val cloud: String,
 
-    val leaf1: Colour,
-    val trunk1: Colour,
-    val mountain1: Colour,
+    val leaf1: String,
+    val trunk1: String,
+    val mountain1: String,
 
-    val leaf2: Colour,
-    val trunk2: Colour,
-    val mountain2: Colour,
+    val leaf2: String,
+    val trunk2: String,
+    val mountain2: String,
 
-    val leaf3: Colour,
-    val trunk3: Colour,
-    val mountain3: Colour
+    val leaf3: String,
+    val trunk3: String,
+    val mountain3: String
 ): SkyTheme() {
     companion object {
         private val day by lazy {
             Theme(
-                sky = midday.colour,
-                background1 = blue1.colour,
-                background2 = blue2.colour,
-                background3 = blue3.colour,
-                sun = gold1.colour,
-                cloud = white.colour,
+                sky = midday.color,
+                background1 = blue1.color,
+                background2 = blue2.color,
+                background3 = blue3.color,
+                sun = gold1.color,
+                cloud = white.color,
 
-                leaf1 = green1.colour,
-                trunk1 = brown.colour,
-                mountain1 = black1.colour,
+                leaf1 = green1.color,
+                trunk1 = brown.color,
+                mountain1 = black1.color,
 
-                leaf2 = green2.colour,
-                trunk2 = brown.colour,
-                mountain2 = black2.colour,
+                leaf2 = green2.color,
+                trunk2 = brown.color,
+                mountain2 = black2.color,
 
-                leaf3 = green3.colour,
-                trunk3 = brown.colour,
-                mountain3 = black3.colour
+                leaf3 = green3.color,
+                trunk3 = brown.color,
+                mountain3 = black3.color
             )
         }
 
         private val night by lazy {
             Theme(
-                sky = midnight.colour,
-                background1 = magenta.colour,
-                background2 = amber.colour,
-                background3 = gold1.colour,
-                sun = white.colour,
-                cloud = amber.colour,
+                sky = midnight.color,
+                background1 = magenta.color,
+                background2 = amber.color,
+                background3 = gold1.color,
+                sun = white.color,
+                cloud = amber.color,
 
-                leaf1 = magenta.colour,
-                trunk1 = magenta.colour,
-                mountain1 = magenta.colour,
+                leaf1 = magenta.color,
+                trunk1 = magenta.color,
+                mountain1 = magenta.color,
 
-                leaf2 = eggplant.colour,
-                trunk2 = eggplant.colour,
-                mountain2 = eggplant.colour,
+                leaf2 = eggplant.color,
+                trunk2 = eggplant.color,
+                mountain2 = eggplant.color,
 
-                leaf3 = midnight.colour,
-                trunk3 = midnight.colour,
-                mountain3 = midnight.colour
+                leaf3 = midnight.color,
+                trunk3 = midnight.color,
+                mountain3 = midnight.color
             )
         }
 

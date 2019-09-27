@@ -16,72 +16,71 @@ import com.zdog.demo.ui.shapes.Colors.midday
 import com.zdog.demo.ui.shapes.Colors.midnight
 import com.zdog.demo.ui.shapes.Colors.white
 import com.zdog.demo.ui.effects.SkyTheme
-import com.zdog.library.render.Colour
 
 internal data class Theme(
-    override val sky: Colour,
-    override val background1: Colour,
-    override val background2: Colour,
-    override val background3: Colour,
-    override val sun: Colour,
-    override val cloud: Colour,
+    override val sky: String,
+    override val background1: String,
+    override val background2: String,
+    override val background3: String,
+    override val sun: String,
+    override val cloud: String,
 
-    val grass1: Colour,
-    val fan1:Colour,
-    val body1: Colour,
+    val grass1: String,
+    val fan1:String,
+    val body1: String,
 
-    val grass2: Colour,
-    val fan2:Colour,
-    val body2: Colour,
+    val grass2: String,
+    val fan2:String,
+    val body2: String,
 
-    val grass3: Colour,
-    val fan3:Colour,
-    val body3: Colour
+    val grass3: String,
+    val fan3:String,
+    val body3: String
 ): SkyTheme() {
     companion object {
         private val day by lazy {
             Theme(
-                sky = midday.colour,
-                background1 = blue1.colour,
-                background2 = blue2.colour,
-                background3 = blue3.colour,
-                sun = gold1.colour,
-                cloud = white.colour,
+                sky = midday.color,
+                background1 = blue1.color,
+                background2 = blue2.color,
+                background3 = blue3.color,
+                sun = gold1.color,
+                cloud = white.color,
 
-                grass1 = green1.colour,
-                fan1 = gray1.colour,
-                body1 = gray2.colour,
+                grass1 = green1.color,
+                fan1 = gray1.color,
+                body1 = gray2.color,
 
-                grass2 = green2.colour,
-                fan2 = gray1.colour,
-                body2 = gray2.colour,
+                grass2 = green2.color,
+                fan2 = gray1.color,
+                body2 = gray2.color,
 
-                grass3 = green3.colour,
-                fan3 = gray1.colour,
-                body3 = gray2.colour
+                grass3 = green3.color,
+                fan3 = gray1.color,
+                body3 = gray2.color
             )
         }
 
         private val night by lazy {
             Theme(
-                sky = midnight.colour,
-                background1 = magenta.colour,
-                background2 = amber.colour,
-                background3 = gold1.colour,
-                sun = white.colour,
-                cloud = amber.colour,
+                sky = midnight.color,
+                background1 = magenta.color,
+                background2 = amber.color,
+                background3 = gold1.color,
+                sun = white.color,
+                cloud = amber.color,
 
-                grass1 = magenta.colour,
-                fan1 = magenta.colour,
-                body1 = magenta.colour,
+                grass1 = magenta.color,
+                fan1 = magenta.color,
+                body1 = magenta.color,
 
-                grass2 = eggplant.colour,
-                fan2 = eggplant.colour,
-                body2 = eggplant.colour,
+                grass2 = eggplant.color,
+                fan2 = eggplant.color,
+                body2 = eggplant.color,
 
-                grass3 = midnight.colour,
-                fan3 = midnight.colour,
-                body3 = midnight.colour
+                grass3 = midnight.color,
+                fan3 = midnight.color,
+                body3 = midnight.color
             )
         }
 

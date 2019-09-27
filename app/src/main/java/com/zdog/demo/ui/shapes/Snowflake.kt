@@ -25,7 +25,7 @@ class Snowflake(private val diameter: Float = 8f) : Shape(),
         )
 
         stroke = 5f
-        color = white.colour
+        color = white.color
         fill = false
 
         onCreate()

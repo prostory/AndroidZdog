@@ -23,7 +23,7 @@ class Glowworm: Entity() {
                 z = layerSpace *-0.25f)
             stroke = 4f
             addTo = container
-            color = Colors.gold1.colour
+            color = Colors.gold1.color
         }
 
         particle.copy {
@@ -34,7 +34,7 @@ class Glowworm: Entity() {
         particle.copy {
             translate(x = -70f, y = 2f,
                 z = layerSpace *0.75f)
-            color = amber.colour
+            color = amber.color
         }
 
         particle.copy {
@@ -50,7 +50,7 @@ class Glowworm: Entity() {
         particle.copy {
             translate(x = 34f, y = 34f,
                 z = layerSpace *1.9f)
-            color = amber.colour
+            color = amber.color
         }
 
         particle.copy {

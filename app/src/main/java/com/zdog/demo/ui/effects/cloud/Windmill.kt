@@ -67,7 +67,7 @@ class Windmill : Group() {
         return super.scale(scale)
     }
 
-    fun changeColor(world: World, fan: Colour, body: Colour, duration: Long = 0, delay: Long = 0) {
+    fun changeColor(world: World, fan: String, body: String, duration: Long = 0, delay: Long = 0) {
         if (duration > 0) {
             this.fan.colorTo(world, fan).delay(delay).duration(duration).start()
             this.body.colorTo(world, body).delay(delay).duration(duration).start()

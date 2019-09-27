@@ -83,8 +83,8 @@ class Cone : Ellipse() {
         setSurfaceRenderPoint(2, tangentB)
 
         renderer.renderPath(surfacePathCommands)
-        renderer.stroke(stroke > 0, color, stroke, renderAlpha)
-        renderer.fill(fill, color, renderAlpha)
+        renderer.stroke(stroke > 0, colour, stroke, renderAlpha)
+        renderer.fill(fill, colour, renderAlpha)
         renderer.end()
     }
 

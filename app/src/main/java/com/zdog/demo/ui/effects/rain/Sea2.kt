@@ -47,7 +47,7 @@ class Sea2 : Entity() {
     private fun initColor(theme: Theme) {
         sea.color = theme.sea2
         spray.color = theme.sea2
-        smoke.color = Colors.gray1.colour
+        smoke.color = Colors.gray1.color
     }
 
     override fun onAttachTo(world: World, inDay: Boolean) {

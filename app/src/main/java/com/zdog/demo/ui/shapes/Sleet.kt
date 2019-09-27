@@ -8,7 +8,7 @@ import com.zdog.library.render.Shape
 class Sleet(diameter: Float = 12f): Shape(), Dropable {
     init {
         stroke = diameter
-        color = rain.colour
+        color = rain.color
         fill = true
 
         onCreate()

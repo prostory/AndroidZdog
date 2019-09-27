@@ -10,7 +10,7 @@ class Hail(diameter: Float = 12f): Rect(), Dropable {
     init {
         width = diameter
         height = diameter
-        color = white.colour
+        color = white.color
         stroke = 0f
         fill = true
 

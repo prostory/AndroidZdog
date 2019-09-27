@@ -6,7 +6,6 @@ import com.zdog.demo.ui.shapes.Colors.white
 import com.zdog.demo.ui.shapes.Cloud
 import com.zdog.library.render.anchor
 import com.zdog.library.render.set
-import com.zdog.library.render.toColour
 
 class Cloudy : Status() {
     init {
@@ -15,11 +14,11 @@ class Cloudy : Status() {
             addTo = illo
         }.also {
             Cloud().set {
-                color = white.colour
+                color = white.color
                 addTo = it
             }.shader(5f) {
                 translate { z = -4f }
-                color = "#ddd".toColour()
+                color = "#ddd"
                 alpha = 0.3f
             }
         }
@@ -27,7 +26,7 @@ class Cloudy : Status() {
         Cloud().set {
             translate { x = -70f; y = 10f; z = -8f }
             scale(1.2f)
-            color = white.colour
+            color = white.color
             addTo = illo
         }
     }

@@ -14,13 +14,13 @@ class Sun(diameter: Float) : Anchor() {
         let {
             shape {
                 stroke = diameter
-                color = gold1.colour
+                color = gold1.color
                 addTo = it
             }
 
             sunshine = combine {
                 translate { z = -4f }
-                color = gold2.colour
+                color = gold2.color
                 addTo = it
             }.also {
                 rect {

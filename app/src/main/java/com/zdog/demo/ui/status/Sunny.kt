@@ -19,7 +19,7 @@ open class Sunny(diameter: Float=100f): Status() {
         anchor().also {
             Moon().set {
                 radius = diameter/2
-                color = brown.colour
+                color = brown.color
                 addTo = it
             }.copy {
                 radius = diameter/2+5

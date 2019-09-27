@@ -29,7 +29,7 @@ class Renderer {
         paint.strokeCap = value
     }
 
-    fun clearRect(x: Float, y: Float, width: Float, height: Float, color: Colour) {
+    fun clearRect(x: Float, y: Float, width: Float, height: Float, color: Int) {
         val oldStyle = paint.style
         fillStyle = color
         canvas.drawRect(x, y, x+width, y+height, paint)
@@ -117,12 +117,12 @@ class Renderer {
             paint.style = STROKE
         }
 
-    fun stroke(isStroke: Boolean, color: Colour, lineWidth: Float, alpha: Int, effect: PathEffect? = null, layer: ShaderLayer? = null) {
+    fun stroke(isStroke: Boolean, color: Int, lineWidth: Float, alpha: Int, effect: PathEffect? = null, layer: ShaderLayer? = null) {
         if (!isStroke) {
             return
         }
 
-        paint.color = color.get()
+        paint.color = color
         paint.strokeWidth = lineWidth
         stroke(alpha, effect, layer)
     }
@@ -141,20 +141,20 @@ class Renderer {
         }
     }
 
-    var fillStyle: Colour
+    var fillStyle: Int
         get() {
-            return Colour(paint.color)
+            return paint.color
         }
         set(value) {
-            paint.color = value.get()
+            paint.color = value
             paint.style = FILL
         }
 
-    fun fill(isFill: Boolean, color: Colour, alpha: Int, shader: Shader? = null, layer: ShaderLayer? = null) {
+    fun fill(isFill: Boolean, color: Int, alpha: Int, shader: Shader? = null, layer: ShaderLayer? = null) {
         if (!isFill) {
             return
         }
-        paint.color = color.get()
+        paint.color = color
         fill(alpha, shader, layer)
     }
 
@@ -172,13 +172,13 @@ class Renderer {
         }
     }
 
-    fun text(text: String, textSize: Float, centerX: Float, centerY: Float, color: Colour,
+    fun text(text: String, textSize: Float, centerX: Float, centerY: Float, color: Int,
         alpha: Int, typeface: Typeface) {
         paint.style = FILL
         paint.alpha = alpha
         paint.textSize = textSize
         paint.typeface = typeface
-        paint.color = color.get()
+        paint.color = color
         canvas.drawText(text, -centerX, centerY, paint)
     }
 

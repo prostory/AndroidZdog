@@ -49,7 +49,7 @@ class Question : Group() {
                     )
                 )
                 stroke = 8f
-                color = gold1.colour
+                color = gold1.color
                 closed = false
                 addTo = it
             }
@@ -60,7 +60,7 @@ class Question : Group() {
                     line(y=radius*2+14f)
                 )
                 stroke = 12f
-                color = gold2.colour
+                color = gold2.color
                 addTo = it
             }
         }

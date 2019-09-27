@@ -28,7 +28,7 @@ class Raindrop(private val diameter: Float = 8f): Shape(),
 
         stroke = 0f
         fill = true
-        color = rain.colour
+        color = rain.color
 
         onCreate()
     }

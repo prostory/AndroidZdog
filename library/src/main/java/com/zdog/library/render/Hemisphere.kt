@@ -42,8 +42,8 @@ class Hemisphere: Ellipse() {
 
         renderer.begin()
         renderer.arc(x, y, demoRadius, startAngle.toFloat(), endAnchor.toFloat())
-        renderer.stroke(stroke > 0, color, stroke, renderAlpha)
-        renderer.fill(fill, color, renderAlpha)
+        renderer.stroke(stroke > 0, colour, stroke, renderAlpha)
+        renderer.fill(fill, colour, renderAlpha)
         renderer.end()
     }
 }

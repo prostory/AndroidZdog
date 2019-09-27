@@ -9,7 +9,7 @@ class Tornado : Scattered() {
     private val offsets = arrayOf(0f, 1f, 11f, 22f, 10f)
     private val tornado = tornado {
         translate { y = 110f; z = -8f }
-        color = wind.colour
+        color = wind.color
         addTo = illo
     }
 

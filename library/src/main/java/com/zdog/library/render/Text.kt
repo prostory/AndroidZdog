@@ -44,7 +44,7 @@ class Text : Anchor() {
         renderer.translate(translate.x, translate.y)
         renderer.scale(scale.x, scale.y)
         renderer.rotate(rotate.z)
-        renderer.text(text, textSize, centerX, centerY, color, renderAlpha, typeface)
+        renderer.text(text, textSize, centerX, centerY, colour, renderAlpha, typeface)
         renderer.restore()
     }
 

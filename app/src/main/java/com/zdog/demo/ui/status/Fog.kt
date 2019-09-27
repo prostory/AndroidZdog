@@ -11,7 +11,7 @@ class Fog : Scattered() {
     private val fog1 = combine {
         addTo = illo
         translate { x = -5f; y = 35f; z = -8f }
-        color = rain.colour
+        color = rain.color
     }.also {
         shape {
             path(move(x=-85f), line(x=-55f))
@@ -27,7 +27,7 @@ class Fog : Scattered() {
     private val fog2 = combine {
         addTo = illo
         translate { x = 5f; y = 50f; z = -8f }
-        color = rain.colour
+        color = rain.color
     }.also {
         shape {
             path(move(x=-85f), line(x=-20f))
@@ -48,7 +48,7 @@ class Fog : Scattered() {
     private val fog3 = combine {
         addTo = illo
         translate { x = -5f; y = 65f; z = -8f }
-        color = rain.colour
+        color = rain.color
     }.also {
         shape {
             path(move(x=-85f), line(x=-75f))
@@ -74,7 +74,7 @@ class Fog : Scattered() {
     private val fog4 = combine {
         addTo = illo
         translate { x = 5f; y = 80f; z = -8f }
-        color = rain.colour
+        color = rain.color
     }.also {
         shape {
             path(move(x=-85f), line(x=-65f))
@@ -105,7 +105,7 @@ class Fog : Scattered() {
     private val fog5 = combine {
         addTo = illo
         translate { x = -5f; y = 95f; z = -8f }
-        color = rain.colour
+        color = rain.color
     }.also {
         shape {
             path(move(x=-85f), line(x=-70f))
