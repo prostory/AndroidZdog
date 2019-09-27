@@ -1,21 +1,21 @@
-package com.zdog.demo.shapes
+package com.zdog.demo.extended
 
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.zdog.demo.R
 import com.zdog.demo.extention.inflate
-import com.zdog.demo.ui.basic.Basic
-import com.zdog.demo.ui.shapes.World
+import com.zdog.demo.ui.extended.Extended
+import com.zdog.library.render.ZdogDrawable
 import kotlinx.android.synthetic.main.fragment_weather_status_item.view.*
 import kotlin.properties.Delegates
 
-class BasicShapesAdapter: RecyclerView.Adapter<BasicShapesAdapter.ViewHolder>() {
+class ExtendedShapesAdapter: RecyclerView.Adapter<ExtendedShapesAdapter.ViewHolder>() {
     enum class PayloadType {
         ROTATE_CHANGED
     }
 
-    private val collection = Basic().shapes
+    private val collection = Extended().shapes
 
     internal var rotate: Boolean by Delegates.observable(true) { _, old, new->
         if (old != new) {
@@ -47,7 +47,7 @@ class BasicShapesAdapter: RecyclerView.Adapter<BasicShapesAdapter.ViewHolder>() 
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(shape: World) {
+        fun bind(shape: ZdogDrawable) {
             with(itemView) {
                 icon.setImageDrawable(shape)
                 rotate(itemView, rotate)

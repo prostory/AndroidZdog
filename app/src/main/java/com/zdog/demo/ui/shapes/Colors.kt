@@ -1,6 +1,8 @@
 package com.zdog.demo.ui.shapes
 
-enum class Colors(c: String) {
+import com.zdog.library.render.color
+
+enum class Colors(val color: String) {
     midnight("#313"),
     eggplant("#525"),
     magenta("#936"),
@@ -38,5 +40,5 @@ enum class Colors(c: String) {
 
     shader("#60222222");
 
-    val color = c
+    val colour = color.color
 }

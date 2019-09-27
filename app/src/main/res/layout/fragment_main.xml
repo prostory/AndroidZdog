@@ -15,6 +15,16 @@
         android:textSize="26sp" />
 
     <Button
+        android:id="@+id/extendedShapes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_button"
+        android:gravity="center"
+        android:text="@string/text_extended_shapes"
+        android:textSize="26sp" />
+
+    <Button
         android:id="@+id/weatherStatus"
         android:layout_width="match_parent"
         android:layout_height="0dp"

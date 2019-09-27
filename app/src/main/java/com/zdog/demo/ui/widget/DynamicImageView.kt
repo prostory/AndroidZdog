@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.annotation.AttrRes
 import androidx.appcompat.widget.AppCompatImageView
-import com.zdog.demo.ui.shapes.World
+import com.zdog.library.render.ZdogDrawable
 
 class DynamicImageView @JvmOverloads constructor(
     context: Context,
@@ -14,33 +14,33 @@ class DynamicImageView @JvmOverloads constructor(
     private var isRunning = false
 
     fun start() {
-        if (drawable is World) {
-            (drawable as World).start()
+        if (drawable is ZdogDrawable) {
+            (drawable as ZdogDrawable).start()
         }
     }
 
     fun start(delay: Long = 0) {
-        if (drawable is World) {
-            (drawable as World).start(delay)
+        if (drawable is ZdogDrawable) {
+            (drawable as ZdogDrawable).start(delay)
         }
     }
 
     fun resume() {
-        if (drawable is World) {
-            (drawable as World).resume()
+        if (drawable is ZdogDrawable) {
+            (drawable as ZdogDrawable).resume()
         }
     }
 
     fun pause() {
-        if (drawable is World) {
-            (drawable as World).pause()
+        if (drawable is ZdogDrawable) {
+            (drawable as ZdogDrawable).pause()
         }
     }
 
     fun cancel() {
-        if (drawable is World) {
-            isRunning = (drawable as World).isRunning()
-            (drawable as World).cancel()
+        if (drawable is ZdogDrawable) {
+            isRunning = (drawable as ZdogDrawable).isRunning()
+            (drawable as ZdogDrawable).cancel()
         }
     }
 

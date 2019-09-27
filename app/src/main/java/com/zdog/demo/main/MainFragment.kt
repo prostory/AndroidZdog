@@ -5,6 +5,7 @@ import android.view.View
 import com.zdog.demo.R
 import com.zdog.demo.core.BaseFragment
 import com.zdog.demo.effect.WeatherEffectFragment
+import com.zdog.demo.extended.ExtendedShapesFragment
 import com.zdog.demo.extention.addFragment
 import com.zdog.demo.extention.clicks
 import com.zdog.demo.shapes.BasicShapesFragment
@@ -26,6 +27,11 @@ class MainFragment : BaseFragment() {
     private fun initializeView() {
         basicShapes.clicks {
             addFragment(BasicShapesFragment.newInstance()) {
+                addToBackStack(null)
+            }
+        }
+        extendedShapes.clicks {
+            addFragment(ExtendedShapesFragment.newInstance()) {
                 addToBackStack(null)
             }
         }
