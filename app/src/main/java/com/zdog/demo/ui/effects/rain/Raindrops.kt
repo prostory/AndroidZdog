@@ -3,10 +3,7 @@ package com.zdog.demo.ui.effects.rain
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import com.zdog.demo.ui.shapes.*
-import com.zdog.library.render.Combine
-import com.zdog.library.render.Shape
-import com.zdog.library.render.line
-import com.zdog.library.render.set
+import com.zdog.library.render.*
 import kotlin.random.Random
 
 class Raindrops(count: Int,

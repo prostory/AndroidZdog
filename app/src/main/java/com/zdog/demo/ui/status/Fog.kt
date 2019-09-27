@@ -9,7 +9,7 @@ import com.zdog.library.render.shape
 
 class Fog : Scattered() {
     private val fog1 = combine {
-        addTo = world
+        addTo = illo
         translate { x = -5f; y = 35f; z = -8f }
         color = rain.colour
     }.also {
@@ -25,7 +25,7 @@ class Fog : Scattered() {
         }
     }
     private val fog2 = combine {
-        addTo = world
+        addTo = illo
         translate { x = 5f; y = 50f; z = -8f }
         color = rain.colour
     }.also {
@@ -46,7 +46,7 @@ class Fog : Scattered() {
         }
     }
     private val fog3 = combine {
-        addTo = world
+        addTo = illo
         translate { x = -5f; y = 65f; z = -8f }
         color = rain.colour
     }.also {
@@ -72,7 +72,7 @@ class Fog : Scattered() {
         }
     }
     private val fog4 = combine {
-        addTo = world
+        addTo = illo
         translate { x = 5f; y = 80f; z = -8f }
         color = rain.colour
     }.also {
@@ -103,7 +103,7 @@ class Fog : Scattered() {
         }
     }
     private val fog5 = combine {
-        addTo = world
+        addTo = illo
         translate { x = -5f; y = 95f; z = -8f }
         color = rain.colour
     }.also {

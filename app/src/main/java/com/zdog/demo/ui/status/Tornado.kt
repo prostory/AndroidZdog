@@ -10,7 +10,7 @@ class Tornado : Scattered() {
     private val tornado = tornado {
         translate { y = 110f; z = -8f }
         color = wind.colour
-        addTo = world
+        addTo = illo
     }
 
     override fun onDynamic(inDay: Boolean) {

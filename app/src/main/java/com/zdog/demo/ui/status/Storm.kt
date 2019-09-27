@@ -19,7 +19,7 @@ open class Storm(vararg components: Anchor =
         }
         drops.forEach {
             it.translate { x= 20f; y = 10f; z = -8f }
-            world.addChild(it)
+            illo.addChild(it)
         }
     }
 

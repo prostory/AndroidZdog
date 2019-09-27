@@ -5,13 +5,7 @@ import android.animation.ValueAnimator
 import android.view.animation.OvershootInterpolator
 import com.zdog.demo.ui.shapes.Colors.gold1
 import com.zdog.demo.ui.shapes.Colors.gold2
-import com.zdog.library.render.Anchor
-import com.zdog.library.render.Combine
-import com.zdog.library.render.TAU
-import com.zdog.library.render.combine
-import com.zdog.library.render.copy
-import com.zdog.library.render.rect
-import com.zdog.library.render.shape
+import com.zdog.library.render.*
 
 class Sun(diameter: Float) : Anchor() {
     private val sunshine: Combine

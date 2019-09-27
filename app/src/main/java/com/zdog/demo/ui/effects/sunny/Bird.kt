@@ -5,6 +5,7 @@ import com.zdog.demo.ui.effects.bird
 import com.zdog.demo.ui.effects.layerSpace
 import com.zdog.demo.ui.shapes.*
 import com.zdog.demo.ui.shapes.Colors.midnight
+import com.zdog.library.render.*
 
 class Bird : Entity() {
     private val shape = bird {

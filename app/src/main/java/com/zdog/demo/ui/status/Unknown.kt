@@ -9,7 +9,7 @@ import com.zdog.library.render.set
 
 class Unknown : Scattered() {
     private val question = Question().set {
-        addTo = world
+        addTo = illo
         translate { y = 50f }
     }
 

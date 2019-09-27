@@ -4,9 +4,7 @@ package com.zdog.demo.ui.effects.sunny
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import com.zdog.demo.ui.shapes.*
-import com.zdog.library.render.Anchor
-import com.zdog.library.render.Vector
-import com.zdog.library.render.vector
+import com.zdog.library.render.*
 import kotlin.random.Random
 
 class RandomMover(

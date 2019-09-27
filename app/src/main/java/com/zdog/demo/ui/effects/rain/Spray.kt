@@ -1,6 +1,5 @@
 package com.zdog.demo.ui.effects.rain
 
-import android.animation.ValueAnimator
 import com.zdog.demo.ui.shapes.*
 import com.zdog.library.render.*
 

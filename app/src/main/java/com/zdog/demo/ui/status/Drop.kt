@@ -7,7 +7,7 @@ import com.zdog.library.render.anchor
 open class Drop(vararg components: Anchor, showers: Boolean = false)
     : Scattered(showers) {
     protected val drops = anchor {
-        addTo = world
+        addTo = illo
         components.forEach {
             addChild(it)
         }

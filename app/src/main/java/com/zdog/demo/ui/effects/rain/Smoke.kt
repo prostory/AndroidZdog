@@ -1,10 +1,7 @@
 package com.zdog.demo.ui.effects.rain
 
 import com.zdog.demo.ui.shapes.*
-import com.zdog.library.render.Combine
-import com.zdog.library.render.copy
-import com.zdog.library.render.ellipse
-import com.zdog.library.render.magnitudeSqrt
+import com.zdog.library.render.*
 
 class Smoke : Combine() {
     init {

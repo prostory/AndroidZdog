@@ -3,10 +3,7 @@ package com.zdog.demo.ui.effects.rain
 import com.zdog.demo.ui.effects.Entity
 import com.zdog.demo.ui.effects.layerSpace
 import com.zdog.demo.ui.shapes.*
-import com.zdog.library.render.Shape
-import com.zdog.library.render.anchor
-import com.zdog.library.render.line
-import com.zdog.library.render.shape
+import com.zdog.library.render.*
 
 class Sea3 : Entity() {
     private val container = anchor {

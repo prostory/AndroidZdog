@@ -6,9 +6,7 @@ import com.zdog.demo.ui.effects.cloud2
 import com.zdog.demo.ui.effects.layerSpace
 import com.zdog.demo.ui.shapes.*
 import com.zdog.demo.ui.shapes.Colors.white
-import com.zdog.library.render.TAU
-import com.zdog.library.render.combine
-import com.zdog.library.render.copy
+import com.zdog.library.render.*
 
 class Clouds : Entity() {
     private val container = combine {

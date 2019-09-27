@@ -5,8 +5,8 @@ import com.zdog.demo.ui.effects.layerSpace
 import com.zdog.demo.ui.shapes.Colors
 import com.zdog.demo.ui.shapes.Colors.amber
 import com.zdog.demo.ui.shapes.World
-import com.zdog.demo.ui.shapes.alphaTo
-import com.zdog.demo.ui.shapes.delay
+import com.zdog.library.render.alphaTo
+import com.zdog.library.render.delay
 import com.zdog.library.render.anchor
 import com.zdog.library.render.copy
 import com.zdog.library.render.shape

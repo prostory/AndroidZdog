@@ -1,8 +1,8 @@
 package com.zdog.demo.ui.basic
 
 import com.zdog.demo.ui.shapes.World
-import com.zdog.demo.ui.shapes.duration
-import com.zdog.demo.ui.shapes.repeat
+import com.zdog.library.render.duration
+import com.zdog.library.render.repeat
 import com.zdog.library.render.*
 
 class Shapes {
@@ -13,7 +13,7 @@ class Shapes {
     init {
         var index = 0
         shape {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             path(
                 line(x = -40f),
                 line(x = 40f)
@@ -23,7 +23,7 @@ class Shapes {
         }
 
         shape {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             path(
                 line(x = -32f, y = -40f),
                 line(x = 32f, y = -40f),
@@ -36,7 +36,7 @@ class Shapes {
         }
 
         shape {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             path(
                 line(x = -32f, y = -40f, z = 40f),
                 line(x = 32f, y = -40f),
@@ -49,7 +49,7 @@ class Shapes {
         }
 
         shape {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             path(
                 line(x = -60f, y = -60f),
                 arc(
@@ -67,7 +67,7 @@ class Shapes {
         }
 
         shape {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             path(
                 line(x = -60f, y = -60f),
                 bezier(
@@ -82,7 +82,7 @@ class Shapes {
         }
 
         val triangle = shape {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             path(
                 line(x = 0f, y = -40f),
                 line(x = 40f, y = 40f),
@@ -93,12 +93,12 @@ class Shapes {
         }
 
         triangle.copy {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             closed = false
         }
 
         hemisphere {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             diameter = 120f
             stroke = 0f
             color = "#C25".toColour()
@@ -106,7 +106,7 @@ class Shapes {
         }
 
         cone {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             diameter = 70f
             length = 90f
             stroke = 0f
@@ -115,7 +115,7 @@ class Shapes {
         }
 
         cylinder {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             diameter = 80f
             length = 120f
             stroke = 0f
@@ -124,7 +124,7 @@ class Shapes {
         }
 
         cylinder {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             diameter = 80f
             length = 120f
             stroke = 0f
@@ -134,7 +134,7 @@ class Shapes {
         }
 
         val box = box {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             width = 120f
             height = 100f
             depth = 80f
@@ -147,7 +147,7 @@ class Shapes {
         }
 
         box.copy {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             leftFace = null
             rightFace = null
             rearFace = "#EA0".toColour()
@@ -155,9 +155,9 @@ class Shapes {
 
         val distance = 40f
 
-        shapes[index].world.rotate(x = -(TAU / 16).toFloat())
+        shapes[index].illo.rotate(x = -(TAU / 16).toFloat())
         val dot = shape {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
             translate(y = -distance)
             stroke = 80f
             color = "#636".toColour()
@@ -182,9 +182,9 @@ class Shapes {
             translate(y = distance)
         }
 
-        shapes[index].world.rotate(x = -(TAU / 16).toFloat())
+        shapes[index].illo.rotate(x = -(TAU / 16).toFloat())
         val dot2 = dot.copy {
-            addTo = shapes[index++].world
+            addTo = shapes[index++].illo
         }
         dot2.copy {
             translate(x = -distance)
@@ -205,7 +205,7 @@ class Shapes {
         shapes.forEach {
             it.apply {
                 play(
-                    world.rotateTo(y = TAU.toFloat()).duration(3000).repeat()
+                    illo.rotateTo(y = TAU.toFloat()).duration(3000).repeat()
                 )
             }
         }

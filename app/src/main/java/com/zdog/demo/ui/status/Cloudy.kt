@@ -12,7 +12,7 @@ class Cloudy : Status() {
     init {
         anchor {
             translate { x = -80f; y = 40f }
-            addTo = world
+            addTo = illo
         }.also {
             Cloud().set {
                 color = white.colour
@@ -28,20 +28,20 @@ class Cloudy : Status() {
             translate { x = -70f; y = 10f; z = -8f }
             scale(1.2f)
             color = white.colour
-            addTo = world
+            addTo = illo
         }
     }
 
     override fun onDynamic(inDay: Boolean) {
         super.onDynamic(inDay)
         play(
-            world.children[0].translateBy(10f, 10f) {
+            illo.children[0].translateBy(10f, 10f) {
                 repeatMode = REVERSE
                 repeatCount = INFINITE
                 duration = 1000
             }
         ).with(
-            world.children[1].translateBy(10f, 10f) {
+            illo.children[1].translateBy(10f, 10f) {
                 repeatMode = REVERSE
                 repeatCount = INFINITE
                 duration = 1000

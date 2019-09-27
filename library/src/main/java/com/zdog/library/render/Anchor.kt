@@ -46,7 +46,7 @@ open class Anchor: IProperty {
         Color
     }
 
-    private val animators = SparseArray<ValueAnimator>(AnimatorType.values().size)
+    private val animators by lazy { SparseArray<ValueAnimator>(AnimatorType.values().size) }
 
     override fun onCreate() {
         addTo?.addChild(this)
@@ -195,7 +195,7 @@ open class Anchor: IProperty {
         for (i in 0 until animators.size()) {
             val animator = animators.valueAt(i)
             if (animator != null) {
-                animator.removeAllListeners()
+                animator.pause()
                 animator.cancel()
             }
         }
@@ -206,7 +206,7 @@ open class Anchor: IProperty {
     fun addAnimator(type: AnimatorType, animator: ValueAnimator) {
         val old = animators[type.ordinal]
         if (old != null) {
-            old.removeAllListeners()
+            old.pause()
             old.cancel()
         }
         animators.put(type.ordinal, animator)

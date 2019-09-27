@@ -6,7 +6,7 @@ import com.zdog.library.render.*
 
 class Sky(world: World) {
     val background = shape {
-        addTo = world.world
+        addTo = world.illo
         translate(z = layerSpace * -2)
         visible = false
     }
@@ -97,7 +97,7 @@ class Sky(world: World) {
         }
 
         cloud = cloud {
-            addTo = world.world
+            addTo = world.illo
             translate(z = layerSpace * -1)
         }
     }
@@ -108,7 +108,7 @@ class Sky(world: World) {
         bgGroup3.color = theme.background3
         sun.color = theme.sun
         cloud.color = theme.cloud
-        world.world.color = theme.sky
+        world.illo.color = theme.sky
     }
 
     fun onSwitchDay(world: World, theme: SkyTheme, inDay: Boolean) {
@@ -130,7 +130,7 @@ class Sky(world: World) {
             bgGroup2.colorTo(world, theme.background2).duration(1200).start()
             bgGroup3.colorTo(world, theme.background3).duration(1200).start()
             cloud.colorTo(world, theme.cloud).duration(1200).start()
-            world.world.colorTo(world, theme.sky).duration(1200).start()
+            world.illo.colorTo(world, theme.sky).duration(1200).start()
         } else {
             sunshine.children.forEachIndexed { index, dot ->
                 dot.translateTo(
@@ -152,7 +152,7 @@ class Sky(world: World) {
             bgGroup2.colorTo(world, theme.background2).delay(1200).start()
             bgGroup3.colorTo(world, theme.background3).delay(1200).start()
             cloud.colorTo(world, theme.cloud).delay(1200).start()
-            world.world.colorTo(world, theme.sky).delay(1200).start()
+            world.illo.colorTo(world, theme.sky).delay(1200).start()
         }
     }
 }

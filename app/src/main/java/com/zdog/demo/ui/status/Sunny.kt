@@ -12,7 +12,7 @@ import com.zdog.library.render.set
 
 open class Sunny(diameter: Float=100f): Status() {
     protected val sky = anchor {
-        addTo = world
+        addTo = illo
     }
 
     protected val moon by lazy {

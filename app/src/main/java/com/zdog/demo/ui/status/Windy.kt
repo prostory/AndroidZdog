@@ -9,7 +9,7 @@ import com.zdog.library.render.set
 open class Windy : Scattered() {
     protected val wind = Wind().set {
         color = Colors.wind.colour
-        addTo = world
+        addTo = illo
         alpha = 0f
         scale(0.7f)
         translate { y = 70f; z = -8f }

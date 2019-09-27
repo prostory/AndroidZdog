@@ -5,6 +5,7 @@ import com.zdog.demo.ui.effects.layerSpace
 import com.zdog.demo.ui.effects.star
 import com.zdog.demo.ui.shapes.*
 import com.zdog.demo.ui.shapes.Colors.gold1
+import com.zdog.library.render.*
 
 class Stars: Entity() {
     private val star1 = star {

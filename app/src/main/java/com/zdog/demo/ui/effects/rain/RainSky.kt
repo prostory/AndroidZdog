@@ -1,13 +1,10 @@
 package com.zdog.demo.ui.effects.rain
 
-import android.animation.ValueAnimator
 import com.zdog.demo.ui.effects.Entity
 import com.zdog.demo.ui.effects.Sky
 import com.zdog.demo.ui.effects.layerSpace
 import com.zdog.demo.ui.shapes.*
-import com.zdog.library.render.attachTo
-import com.zdog.library.render.set
-import com.zdog.library.render.vector
+import com.zdog.library.render.*
 
 class RainSky(private val sky: Sky) : Entity() {
     private val drops1 = Raindrops(
@@ -75,6 +72,6 @@ class RainSky(private val sky: Sky) : Entity() {
         sky.cloud.colorTo(world, theme.cloud).duration(1200).start()
         drops1.colorTo(world, theme.sea1).duration(1200).start()
         drops2.colorTo(world, theme.sea3).duration(1200).start()
-        world.world.colorTo(world, theme.sky).duration(1200).start()
+        world.illo.colorTo(world, theme.sky).duration(1200).start()
     }
 }

@@ -21,12 +21,12 @@ class Dust: Scattered() {
             stroke = 16f
             fill = false
             color = "#ddd".toColour()
-            addTo = world
+            addTo = illo
         }
 
         dusts = combine {
             translate { y = 100f; z = -8f }
-            addTo = world
+            addTo = illo
             color = dust.colour
         }.also {
             val dots = shape {

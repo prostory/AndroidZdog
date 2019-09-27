@@ -1,9 +1,9 @@
 package com.zdog.demo.ui.effects.rain
 
 import com.zdog.demo.ui.shapes.World
-import com.zdog.demo.ui.shapes.colorTo
-import com.zdog.demo.ui.shapes.delay
-import com.zdog.demo.ui.shapes.duration
+import com.zdog.library.render.colorTo
+import com.zdog.library.render.delay
+import com.zdog.library.render.duration
 import com.zdog.library.render.*
 
 class Ship : Group() {
