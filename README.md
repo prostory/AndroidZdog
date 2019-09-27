@@ -1,4 +1,4 @@
-AndroidZdog
+# AndroidZdog
 
 Porting [Zdog](https://zzz.dog/)(Round, flat, designer-friendly  pseudo-3D engine for canvas) to Android with kotlin
 
@@ -224,7 +224,7 @@ Add it in your root build.gradle at the end of repositories:
                 vector(x = 20f, y = -60f),	// corner
                 vector(x = 20f, y = 20f)	// end point
             ),
-            arc(							// start next arc from last end point
+            arc(				// start next arc from last end point
                 vector(x = 20f, y = 60f),	// corner
                 vector(x = 60f, y = 60f)	// end point
             )
