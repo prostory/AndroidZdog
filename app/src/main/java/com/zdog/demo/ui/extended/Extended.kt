@@ -213,7 +213,7 @@ class Extended {
 
         shapes.add(ZdogDrawable().apply {
             illo.alpha(0f)
-            val line = shape {
+            val arrow = shape {
                 addTo = illo
                 path(
                     move(-80f, 40f),
@@ -237,13 +237,13 @@ class Extended {
                 }
             }
 
-            play(line.animate {
+            play(arrow.animate {
                 onReset {
-                    updatePath(line, 40f)
+                    updatePath(arrow, 40f)
                 }
 
                 update {
-                    updatePath(line, -40f + it * 80f)
+                    updatePath(arrow, -40f + it * 80f)
                 }
             }.duration(1500).toReverse())
         })
