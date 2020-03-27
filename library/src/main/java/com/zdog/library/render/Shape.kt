@@ -160,7 +160,7 @@ open class Shape : Anchor() {
         val isClosed = !isTwoPoints && closed
         val color = renderColor
         renderer.renderPath(path, isClosed)
-        renderer.stroke(stroke > 0f, color, stroke, renderAlpha, effect, layer)
+        renderer.stroke(stroke > 0f, color, stroke, renderAlpha, effect, shader, layer)
         renderer.fill(fill, color, renderAlpha, shader)
         renderer.end()
     }

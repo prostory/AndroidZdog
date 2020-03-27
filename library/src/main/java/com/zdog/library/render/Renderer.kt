@@ -117,20 +117,20 @@ class Renderer {
             paint.style = STROKE
         }
 
-    fun stroke(isStroke: Boolean, color: Int, lineWidth: Float, alpha: Int, effect: PathEffect? = null, layer: ShaderLayer? = null) {
+    fun stroke(isStroke: Boolean, color: Int, lineWidth: Float, alpha: Int, effect: PathEffect? = null, shader: Shader? = null, layer: ShaderLayer? = null) {
         if (!isStroke) {
             return
         }
 
         paint.color = color
         paint.strokeWidth = lineWidth
-        stroke(alpha, effect, layer)
+        stroke(alpha, effect, shader, layer)
     }
 
-    fun stroke(alpha: Int, effect: PathEffect? = null, layer: ShaderLayer? = null) {
+    fun stroke(alpha: Int, effect: PathEffect? = null, shader: Shader? = null, layer: ShaderLayer? = null) {
         paint.style = STROKE
         paint.alpha = alpha
-        paint.shader = null
+        paint.shader = shader
         paint.pathEffect = effect
         if (layer != null) {
             paint.setShadowLayer(layer.radius, layer.dx, layer.dy, layer.color)
